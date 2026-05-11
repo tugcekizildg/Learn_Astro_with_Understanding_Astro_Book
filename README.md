@@ -1,3 +1,71 @@
+# Personal Website with Astro
+
+A personal website built with Astro while learning from the book _Understanding Astro_ written by Ohans Emmanuel.
+
+---
+
+## Project Structure
+
+```bash
+src
+├── components
+│   ├── Footer.astro
+│   ├── NavigationBar.astro
+│   └── ThemeToggler.astro
+│
+├── layouts
+│   ├── Blog.astro
+│   └── Main.astro
+│
+├── pages
+│   ├── about.astro
+│   ├── beyond-tech.md
+│   ├── index.astro
+│   └── philosophies.md
+│
+└── styles
+    └── global.css
+```
+
+---
+
+## Features
+
+- Personal homepage
+- About page
+- Markdown blog pages
+- Reusable layouts
+- Reusable Astro components
+- Theme toggle functionality
+- Global styling
+- File-based routing
+
+---
+
+## Technologies Used
+
+- Astro
+- HTML5
+- CSS3
+- JavaScript
+- Markdown
+
+---
+
+## Learning Goals
+
+This project focuses on learning:
+
+- Astro fundamentals
+- Component-based architecture
+- Layout composition
+- Markdown integration
+- Styling in Astro
+- Theme switching
+- File-based routing
+
+---
+
 # Astro Starter Kit: Minimal
 
 ```sh

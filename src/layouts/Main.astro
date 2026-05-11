@@ -1,0 +1,75 @@
+---
+import '../styles/global.css';
+
+import Footer from '../components/Footer.astro';
+import NavigationBar from '../components/NavigationBar.astro';
+
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    {/* Add a new meta description tag */}
+    <meta name='description' content="Frau Katarina's website" />
+    {/* Title is hardcoded as Astro, for now. */}
+    {/* Google Font */}
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'
+      rel='stylesheet'
+    />
+    <title>{title}</title>
+    <script is:inline>
+      const DARK_THEME_CLASS = 'dark';
+
+      const COLOUR_MODE = 'COLOUR_MODE';
+
+      const LIGHT_THEME = 'LIGHT';
+
+      const DARK_THEME = 'DARK';
+
+      const rootEl = document.documentElement;
+
+      const getInitialColourMode = () => {
+        const savedMode = localStorage.getItem(COLOUR_MODE);
+
+        if (savedMode) {
+          return savedMode;
+        }
+
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return DARK_THEME;
+        }
+
+        return LIGHT_THEME;
+      };
+
+      const setInitialColourMode = (mode) => {
+        if (mode === DARK_THEME) {
+          rootEl.classList.add(DARK_THEME_CLASS);
+        } else {
+          rootEl.classList.remove(DARK_THEME_CLASS);
+        }
+      };
+
+      setInitialColourMode(getInitialColourMode());
+    </script>
+  </head>
+  <body>
+    <main>
+      <button>Donate to charity</button>
+      <NavigationBar />
+      <slot />
+      <Footer />
+    </main>
+  </body>
+</html>
