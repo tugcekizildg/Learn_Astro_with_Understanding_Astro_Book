@@ -47,7 +47,7 @@ src
 - Astro
 - HTML5
 - CSS3
-- JavaScript
+- Typescript
 - Markdown
 
 ---
