@@ -60,7 +60,11 @@ const blogs = await getCollection('blog');
         <li class='blogs__list'>
           <article>
             <img src={blog.data.poster} alt={blog.data.title} />
-            <h2>{blog.data.title}</h2>
+
+            <a href={`/blog/${blog.id}`} class='blog__link'>
+              <h2>{blog.data.title}</h2>
+            </a>
+
             <p>{blog.data.subtitle}</p>
           </article>
         </li>

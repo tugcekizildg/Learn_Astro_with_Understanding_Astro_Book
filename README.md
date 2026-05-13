@@ -4,6 +4,13 @@ A personal website built with Astro while learning from the book _Understanding 
 
 ---
 
+## Screenshots
+
+![HOME](/HomePageDesktopScreenshot.png)
+![FEATURED](/FeaturedBlogsDesktopScreenshot.png)
+
+---
+
 ## Project Structure
 
 ```bash

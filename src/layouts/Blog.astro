@@ -10,6 +10,8 @@ type Props = MarkdownLayoutProps<{
 }>;
 
 const { poster, title, subtitle } = Astro.props.frontmatter;
+
+const { frontmatter } = Astro.props;
 ---
 
 <Main title='Frau Katarina | Blog'>
